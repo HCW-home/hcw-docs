@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Troubleshooting - HCW@Home documentation</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Troubleshooting";
+        var mkdocs_page_input_path = "troubleshooting.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <script src="../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> HCW@Home documentation
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../deploy/">Deployment concept</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../debian/">Install on Debian</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../docker/">Install with Docker</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../customize/">Customize HCW@Home</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="./">Troubleshooting</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#error-1-error-initializing-clamscan-error-connect-enoent-varrunclamavclamdctl">ERROR 1: Error initializing clamscan: Error: connect ENOENT /var/run/clamav/clamd.ctl</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#error-2-error-connect-econnrefused-1270016379">ERROR 2: Error: connect ECONNREFUSED 127.0.0.1:6379</a>
+    </li>
+    </ul>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">HCW@Home documentation</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+      <li>Troubleshooting</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="troubleshooting">Troubleshooting</h1>
+<h3 id="error-1-error-initializing-clamscan-error-connect-enoent-varrunclamavclamdctl">ERROR 1: Error initializing clamscan: Error: connect ENOENT /var/run/clamav/clamd.ctl</h3>
+<pre><code>Error initializing clamscan: Error: connect ENOENT /var/run/clamav/clamd.ctl
+at PipeConnectWrap.afterConnect [as oncomplete] (node:net:1278:16) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'connect',
+  address: '/var/run/clamav/clamd.ctl'
+}
+</code></pre>
+<p>Check Clamv socket is existing with:</p>
+<pre><code>ls -l /var/run/clamav/clamd.ctl
+</code></pre>
+<p>If not, check the clamav-daemon service is running properly.</p>
+<h3 id="error-2-error-connect-econnrefused-1270016379">ERROR 2: Error: connect ECONNREFUSED 127.0.0.1:6379</h3>
+<pre><code>error: A hook (`session`) failed to load!
+error: Could not tear down the ORM hook.  Error details: Error: Consistency violation: Attempting to tear down a datastore (`default`) which is not currently registered with this adapter.  This is usually due to a race condition in userland code (e.g. attempting to tear down the same ORM instance more than once), or it could be due to a bug in this adapter.  (If you get stumped, reach out at http://sailsjs.com/support.)
+    at Object.teardown (/usr/share/hcw-athome/backend/node_modules/sails-mongo/lib/index.js:390:19)
+    at /usr/share/hcw-athome/backend/node_modules/waterline/lib/waterline.js:767:27
+    at /usr/share/hcw-athome/backend/node_modules/async/dist/async.js:3113:16
+    at eachOfArrayLike (/usr/share/hcw-athome/backend/node_modules/async/dist/async.js:1072:9)
+    at eachOf (/usr/share/hcw-athome/backend/node_modules/async/dist/async.js:1120:5)
+    at Object.eachLimit (/usr/share/hcw-athome/backend/node_modules/async/dist/async.js:3175:5)
+    at Object.teardown (/usr/share/hcw-athome/backend/node_modules/waterline/lib/waterline.js:751:11)
+    at Hook.teardown (/usr/share/hcw-athome/backend/node_modules/sails-hook-orm/index.js:246:30)
+    at Sails.wrapper (/usr/share/hcw-athome/backend/node_modules/@sailshq/lodash/lib/index.js:3282:19)
+    at Object.onceWrapper (node:events:627:28)
+    at Sails.emit (node:events:513:28)
+    at Sails.emit (node:domain:489:12)
+    at https://sails.emitter.emit/ (/usr/share/hcw-athome/backend/node_modules/sails/lib/app/private/after.js:56:26)
+    at /usr/share/hcw-athome/backend/node_modules/sails/lib/app/lower.js:67:11
+    at beforeShutdown (/usr/share/hcw-athome/backend/node_modules/sails/lib/app/lower.js:45:12)
+    at Sails.lower (/usr/share/hcw-athome/backend/node_modules/sails/lib/app/lower.js:49:3)
+error: Failed to lift app: Error: connect ECONNREFUSED 127.0.0.1:6379
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1278:16)
+</code></pre>
+<p>Check Redis server is working correctly.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../customize/" class="btn btn-neutral float-left" title="Customize HCW@Home"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../customize/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+  </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme_extra.js" defer></script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
