@@ -1,0 +1,9 @@
+site_name: HCW@Home documentation
+nav:
+  - Home: index.md
+  - Deployment concept: deploy.md
+  - Install on Debian: debian.md
+  - Install with Docker: docker.md
+  - Customize HCW@Home: customize.md
+  - Troubleshooting: troubleshooting.md
+theme: readthedocs
