@@ -1,4 +1,4 @@
-# Debian installation
+# Debian/Ubuntu installation
 
 ## External repository setup
 
