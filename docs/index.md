@@ -28,9 +28,4 @@ Health Care Worker is provided under GPLv3.
 
 Health Care Worker @Home is supported by:
 
-- [Fondation privée des HUG](https://www.fondationhug.org/)
 - [Iabsis SARL](https://www.iabsis.com)
-
-## Installation
-
-The installation process has been moved into [https://hcw-at-home.com/slides/](https://hcw-at-home.com/slides/).
