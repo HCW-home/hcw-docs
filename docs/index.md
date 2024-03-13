@@ -17,8 +17,7 @@ HCW@Home is a scalable, institution-level secure teleconsultation system for typ
 
 ## Links
 
-- Official website: https://hcw-at-home.com/
-- Documentation/Courses: https://hcw-at-home.com/slides
+- Official website: [https://hcw-at-home.com/](https://hcw-at-home.com/)
 
 ## Licensing
 

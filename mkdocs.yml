@@ -1,6 +1,6 @@
 site_name: HCW@Home documentation
 nav:
-  - Home: index.md
+  - Introduction: index.md
   - Deployment concept: deploy.md
   - Install on Debian/Ubuntu: debian.md
   - Install with Docker: docker.md
