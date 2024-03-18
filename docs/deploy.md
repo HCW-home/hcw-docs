@@ -21,11 +21,11 @@ The requirement deeply depends of number of concurrency users connected in same 
 
 The bare minimum domain name required by HCW@Home is three.
 
-- Domain name used by Doctor interface (e.g. healthcare.<your domain>.com)
-- Domain name used by Patient interface(e.g. app.<your domain>.com)
-- Optional - Domain name used by Admin interface (e.g. admin.<your domain>.com)
-- Mediasoup server. (e.g. ms1.<your domain>.com)
-- Optional: Coturn URL (e.g. turn.<your domain>.com)
+- Domain name used by Doctor interface (e.g. `healthcare.<your domain>.com`)
+- Domain name used by Patient interface(e.g. `app.<your domain>.com`)
+- Optional - Domain name used by Admin interface (e.g. `admin.<your domain>.com`)
+- Mediasoup server. (e.g. `ms1.<your domain>.com`)
+- Optional: Coturn URL (e.g. `turn.<your domain>.com`)
 
 ## Firewall considerations
 
