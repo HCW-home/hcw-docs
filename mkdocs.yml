@@ -1,10 +1,14 @@
 site_name: HCW@Home documentation
 nav:
   - Introduction: index.md
-  - Deployment concept: deploy.md
-  - Install on Debian/Ubuntu: debian.md
-  - Install with Docker: docker.md
-  - Customize HCW@Home: customize.md
-  - Configure with Keycloak: keycloak.md
-  - Troubleshooting: troubleshooting.md
+  - Deployment:
+      - Concept: deploy.md
+      - Install on Debian/Ubuntu: debian.md
+      - Install with Docker: docker.md
+      - Customize HCW@Home: customize.md
+      - Configure with Keycloak: keycloak.md
+      - Troubleshooting: troubleshooting.md
+  - Development:
+    - API documentation: api.md
+    - Debug API with Bruno: bruno.md
 theme: readthedocs

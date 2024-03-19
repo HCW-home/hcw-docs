@@ -63,3 +63,13 @@ The color of the app.
 ![alt text](image-3.png)
 
 ## Change the branding name
+
+Branding ensures that patient is using the right instance and also limit the risk of scamming. This branding is used into SMS and patient application.
+
+```
+BRANDING=HCW@Home
+```
+
+Here a sample how mail is changed with this branding.
+
+![alt text](image-6.png)
