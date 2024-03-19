@@ -5,15 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="shortcut icon" href="../img/favicon.ico" />
-    <title>Concept - HCW@Home documentation</title>
+    <title>Debug API with Bruno - HCW@Home documentation</title>
     <link rel="stylesheet" href="../css/theme.css" />
     <link rel="stylesheet" href="../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
     
       <script>
         // Current page data
-        var mkdocs_page_name = "Concept";
-        var mkdocs_page_input_path = "deploy.md";
+        var mkdocs_page_name = "Debug API with Bruno";
+        var mkdocs_page_input_path = "bruno.md";
         var mkdocs_page_url = null;
       </script>
     
@@ -45,18 +45,8 @@
                 </li>
               </ul>
               <p class="caption"><span class="caption-text">Deployment</span></p>
-              <ul class="current">
-                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Concept</a>
-    <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#hardware-or-virtual-hardware-requirements">Hardware or virtual hardware requirements</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#domain-name-considerations">Domain name considerations</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#firewall-considerations">Firewall considerations</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#reverse-proxy-considerations">Reverse proxy considerations</a>
-    </li>
-    </ul>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../deploy/">Concept</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../debian/">Install on Debian/Ubuntu</a>
                   </li>
@@ -70,10 +60,18 @@
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Development</span></p>
-              <ul>
+              <ul class="current">
                   <li class="toctree-l1"><a class="reference internal" href="../api/">API documentation</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../bruno/">Debug API with Bruno</a>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Debug API with Bruno</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#install-bruno">Install Bruno</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#configure-environement">Configure environement</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#run-request">Run request</a>
+    </li>
+    </ul>
                   </li>
               </ul>
       </div>
@@ -90,8 +88,8 @@
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href=".." class="icon icon-home" alt="Docs"></a> &raquo;</li>
-          <li>Deployment &raquo;</li>
-      <li>Concept</li>
+          <li>Development &raquo;</li>
+      <li>Debug API with Bruno</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -100,63 +98,29 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="hcwhome-simple-secure-remote-consultations">HCW@Home - Simple &amp; Secure remote consultations</h1>
-<p>HCW@Home is a complete infrastructure composed of various components. This greatly simplifies the installation without the need to compile the solution. This also ensure smooth upgrades by using the usual package manager.
-Operating system requirements</p>
-<p>You will require at least one server running a recent version of Debian/Ubuntu. We successfully tested the setup on the following environment:</p>
+                <h1 id="debug-api-with-bruno">Debug API with Bruno</h1>
+<p>Bruno is a Fast and Git-Friendly Opensource API client, aimed at revolutionizing the status quo represented by Postman, Insomnia and similar tools out there.</p>
+<h2 id="install-bruno">Install Bruno</h2>
+<p>You can easily download and install Bruno on your computer from the official Bruno website. It's also a free and open source software.</p>
+<blockquote>
+<p><a href="https://www.usebruno.com/downloads">https://www.usebruno.com/downloads</a></p>
+</blockquote>
+<p>The Bruno projects can be opened from the doc/HCW@Home folder from <a href="https://github.com/hcw-home/backend">https://github.com/hcw-home/backend</a> (HCW@Home Backend) Github project.</p>
 <ul>
-<li>Debian 10 and 11</li>
-<li>Ubuntu 20.04, 22.04</li>
-<li>Any linux with Docker support</li>
+<li>Open Bruno on your computer, then click on Collection menu and Open Collection.</li>
+<li>Browse the folder where you dowloaded the Backend files and browse into <code>doc/HCW@Home</code> folder.</li>
 </ul>
-<h2 id="hardware-or-virtual-hardware-requirements">Hardware or virtual hardware requirements</h2>
-<p>The requirement deeply depends of number of concurrency users connected in same time on the platform. The bare minimum is the following:</p>
-<ul>
-<li>1Gb of RAM (a bit more if clamav is installed on same server)</li>
-<li>1 vCPU​</li>
-<li>5Gb of Hard drive free space</li>
-</ul>
-<h2 id="domain-name-considerations">Domain name considerations</h2>
-<p>The bare minimum domain name required by HCW@Home is three.</p>
-<ul>
-<li>Domain name used by Doctor interface (e.g. <code>healthcare.&lt;your domain&gt;.com</code>)</li>
-<li>Domain name used by Patient interface(e.g. <code>app.&lt;your domain&gt;.com</code>)</li>
-<li>Optional - Domain name used by Admin interface (e.g. <code>admin.&lt;your domain&gt;.com</code>)</li>
-<li>Mediasoup server. (e.g. <code>ms1.&lt;your domain&gt;.com</code>)</li>
-<li>Optional: Coturn URL (e.g. <code>turn.&lt;your domain&gt;.com</code>)</li>
-</ul>
-<h2 id="firewall-considerations">Firewall considerations</h2>
-<ul>
-<li>It will required to open the following ports for the Frontend and Backend:<ul>
-<li>Port 443 for the webserver (https)</li>
-<li>Port 80 for the redirect (http)</li>
-</ul>
-</li>
-<li>It will required to open the following ports for the Mediasoup<ul>
-<li>Port 443 for the webserver (https)</li>
-<li>Configurable UDP and TCP range, default is 40000 &gt; 49000.</li>
-</ul>
-</li>
-<li>It will required to open the following ports for the Turn<ul>
-<li>Port 3478 for the service listening.</li>
-<li>Configurable UDP and TCP range, default is 49152 &gt; 65535.</li>
-</ul>
-</li>
-</ul>
-<h2 id="reverse-proxy-considerations">Reverse proxy considerations</h2>
-<p>HCW@Home can perfectly work behind a reverse proxy. You must ensure to have correct support for:</p>
-<ul>
-<li>Enable support of Websocket.</li>
-<li>Don't intercept errors.</li>
-<li>Have the Host, X-Forwarded-Host, X-Forwarded-Port, X-Forwarded-For and X-Forwarded-Proto headers correctly configured.</li>
-</ul>
-<p><img alt="alt text" src="../image-4.png" /></p>
+<p><img alt="alt text" src="../image-5.png" /></p>
+<h2 id="configure-environement">Configure environement</h2>
+<p>Now you have the Bruno project opened, click on No environment from the top right of the menu and choose Configure. Define the various information related to your project (BASE_URI, EMAIL and PASS). Click on Save.</p>
+<p>Now close the modal, and choose your configured environment Development (Admin) from the top right menu.</p>
+<h2 id="run-request">Run request</h2>
+<p>You are now ready to login with HCW@Home\LOGIN\Login local and hen run any requests.</p>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href=".." class="btn btn-neutral float-left" title="Introduction"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../debian/" class="btn btn-neutral float-right" title="Install on Debian/Ubuntu">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../api/" class="btn btn-neutral float-left" title="API documentation"><span class="icon icon-circle-arrow-left"></span> Previous</a>
     </div>
 
   <hr/>
@@ -179,10 +143,8 @@ Operating system requirements</p>
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
-      <span><a href=".." style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../api/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
-    
-      <span><a href="../debian/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>
