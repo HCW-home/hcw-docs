@@ -11,4 +11,5 @@ nav:
   - Development:
     - API documentation: api.md
     - Debug API with Bruno: bruno.md
+    - Python SDK: python.md
 theme: readthedocs
