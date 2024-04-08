@@ -1,6 +1,10 @@
 site_name: HCW@Home documentation
+repo_url: https://github.com/HCW-home
 nav:
   - Introduction: index.md
+  - User guide:
+      - Patient invited by Doctor: doctor-to-patient.md
+      - Additional notifications : configure-notification.md
   - Deployment:
       - Concept: deploy.md
       - Install on Debian/Ubuntu: debian.md
@@ -12,4 +16,13 @@ nav:
     - API documentation: api.md
     - Debug API with Bruno: bruno.md
     - Python SDK: python.md
-theme: readthedocs
+extra:
+  homepage: https://hcw-at-home.com
+theme:
+  name: material
+  logo: logo.svg
+  palette:
+    primary: white
+    accent: light blue
+  icon:
+    repo: fontawesome/brands/github
