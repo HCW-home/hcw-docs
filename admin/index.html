@@ -13,7 +13,7 @@
     
     
       
-        <title>Concept - HCW@Home documentation</title>
+        <title>Administrator interface - HCW@Home documentation</title>
       
     
     
@@ -63,7 +63,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#hcwhome-simple-secure-remote-consultations" class="md-skip">
+        <a href="#admin-interface" class="md-skip">
           Skip to content
         </a>
       
@@ -95,7 +95,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Concept
+              Administrator interface
             
           </span>
         </div>
@@ -293,12 +293,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
       
       
       
@@ -319,11 +321,21 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../admin/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Administrator interface
       </a>
+      
     </li>
   
 
@@ -341,14 +353,12 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
       
       
       
@@ -369,73 +379,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Concept
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../deploy/" class="md-nav__link">
         Concept
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#hardware-or-virtual-hardware-requirements" class="md-nav__link">
-    Hardware or virtual hardware requirements
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#domain-name-considerations" class="md-nav__link">
-    Domain name considerations
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#firewall-considerations" class="md-nav__link">
-    Firewall considerations
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#reverse-proxy-considerations" class="md-nav__link">
-    Reverse proxy considerations
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -613,42 +561,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#hardware-or-virtual-hardware-requirements" class="md-nav__link">
-    Hardware or virtual hardware requirements
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#domain-name-considerations" class="md-nav__link">
-    Domain name considerations
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#firewall-considerations" class="md-nav__link">
-    Firewall considerations
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#reverse-proxy-considerations" class="md-nav__link">
-    Reverse proxy considerations
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -659,63 +571,32 @@
             <article class="md-content__inner md-typeset">
               
                 
-<a href="https://github.com/HCW-home/edit/master/docs/deploy.md" title="Edit this page" class="md-content__button md-icon">
+<a href="https://github.com/HCW-home/edit/master/docs/admin.md" title="Edit this page" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
 </a>
 
 
 
-<h1 id="hcwhome-simple-secure-remote-consultations">HCW@Home - Simple &amp; Secure remote consultations</h1>
-<p>HCW@Home is a complete infrastructure composed of various components. This greatly simplifies the installation without the need to compile the solution. This also ensure smooth upgrades by using the usual package manager.
-Operating system requirements</p>
-<p>You will require at least one server running a recent version of Debian/Ubuntu. We successfully tested the setup on the following environment:</p>
-<ul>
-<li>Debian 10 and 11</li>
-<li>Ubuntu 20.04, 22.04</li>
-<li>Any linux with Docker support</li>
-</ul>
-<h2 id="hardware-or-virtual-hardware-requirements">Hardware or virtual hardware requirements</h2>
-<p>The requirement deeply depends of number of concurrency users connected in same time on the platform. The bare minimum is the following:</p>
-<ul>
-<li>1Gb of RAM (a bit more if clamav is installed on same server)</li>
-<li>1 vCPU​</li>
-<li>5Gb of Hard drive free space</li>
-</ul>
-<h2 id="domain-name-considerations">Domain name considerations</h2>
-<p>The bare minimum domain name required by HCW@Home is three.</p>
-<ul>
-<li>Domain name used by Doctor interface (e.g. <code>healthcare.&lt;your domain&gt;.com</code>)</li>
-<li>Domain name used by Patient interface(e.g. <code>app.&lt;your domain&gt;.com</code>)</li>
-<li>Optional - Domain name used by Admin interface (e.g. <code>admin.&lt;your domain&gt;.com</code>)</li>
-<li>Mediasoup server. (e.g. <code>ms1.&lt;your domain&gt;.com</code>)</li>
-<li>Optional: Coturn URL (e.g. <code>turn.&lt;your domain&gt;.com</code>)</li>
-</ul>
-<h2 id="firewall-considerations">Firewall considerations</h2>
-<ul>
-<li>It will required to open the following ports for the Frontend and Backend:<ul>
-<li>Port 443 for the webserver (https)</li>
-<li>Port 80 for the redirect (http)</li>
-</ul>
-</li>
-<li>It will required to open the following ports for the Mediasoup<ul>
-<li>Port 443 for the webserver (https)</li>
-<li>Configurable UDP and TCP range, default is 40000 &gt; 49000.</li>
-</ul>
-</li>
-<li>It will required to open the following ports for the Turn<ul>
-<li>Port 3478 for the service listening.</li>
-<li>Configurable UDP and TCP range, default is 49152 &gt; 65535.</li>
-</ul>
-</li>
-</ul>
-<h2 id="reverse-proxy-considerations">Reverse proxy considerations</h2>
-<p>HCW@Home can perfectly work behind a reverse proxy. You must ensure to have correct support for:</p>
-<ul>
-<li>Enable support of Websocket.</li>
-<li>Don't intercept errors.</li>
-<li>Have the Host, X-Forwarded-Host, X-Forwarded-Port, X-Forwarded-For and X-Forwarded-Proto headers correctly configured.</li>
-</ul>
-<p><img alt="alt text" src="../image-4.png" /></p>
+<h1 id="admin-interface">Admin interface</h1>
+<p>Admin interface permits to a site administrator to check user roles, approve Requester account done by Partners, manage waiting queues, administrer Mediasoup servers and get anonymised statistics.</p>
+<h1 id="users-administration">Users administration</h1>
+<p>Open <strong>Users</strong> to review all registered users.</p>
+<blockquote>
+<p>Warning, if auto-create mode is enable with SSO, new users might be created on fly.</p>
+</blockquote>
+<p><img alt="User admin list" src="../image-21.png" /></p>
+<p>Click on the Pen to edit a user information and to assign user to queues.</p>
+<p><img alt="Edit user form" src="../image-22.png" /></p>
+<h1 id="requester-administration">Requester administration</h1>
+<p>Requester administration only permits to toggle the active state of a requester.</p>
+<p><img alt="Requester" src="../image-23.png" /></p>
+<p>Click on <strong>Active</strong> switch box to allow or deny the access to consultation request page.</p>
+<h1 id="waiting-queues">Waiting queues</h1>
+<p>Waiting queues are shared areas across several doctors. Whenever a consultation is requested by a patient or a Partner, all doctor in this queues will see it until somebody handle it.</p>
+<p><img alt="Waiting queues" src="../image-24.png" /></p>
+<h1 id="mediasoup-servers">Mediasoup servers</h1>
+<p>HCW@Home can distribute calls over severals Mediasoup servers. When a call is requested, a randon Mediasoup server is taken and users are sent to. The interface permits to do updates or disable server on fly without the need to interupt users or restart server.</p>
+<p><img alt="Mediasoup servers" src="../image-26.png" /></p>
 
               
             </article>
@@ -729,7 +610,7 @@ Operating system requirements</p>
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../admin/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Administrator interface" rel="prev">
+        <a href="../partner-to-doctor/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Consultation requested by Partners" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -738,20 +619,20 @@ Operating system requirements</p>
               <span class="md-footer__direction">
                 Previous
               </span>
-              Administrator interface
+              Consultation requested by Partners
             </div>
           </div>
         </a>
       
       
         
-        <a href="../debian/" class="md-footer__link md-footer__link--next" aria-label="Next: Install on Debian/Ubuntu" rel="next">
+        <a href="../deploy/" class="md-footer__link md-footer__link--next" aria-label="Next: Concept" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Install on Debian/Ubuntu
+              Concept
             </div>
           </div>
           <div class="md-footer__button md-icon">
