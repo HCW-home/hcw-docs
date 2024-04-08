@@ -13,7 +13,7 @@
     
     
       
-        <title>Concept - HCW@Home documentation</title>
+        <title>Patient invited by Doctor - HCW@Home documentation</title>
       
     
     
@@ -63,7 +63,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#hcwhome-simple-secure-remote-consultations" class="md-skip">
+        <a href="#login-on-hcwhome" class="md-skip">
           Skip to content
         </a>
       
@@ -95,7 +95,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Concept
+              Patient invited by Doctor
             
           </span>
         </div>
@@ -217,12 +217,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
       
       
       
@@ -243,11 +245,21 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../doctor-to-patient/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Patient invited by Doctor
       </a>
+      
     </li>
   
 
@@ -279,14 +291,12 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
       
       
       
@@ -307,73 +317,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Concept
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../deploy/" class="md-nav__link">
         Concept
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#hardware-or-virtual-hardware-requirements" class="md-nav__link">
-    Hardware or virtual hardware requirements
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#domain-name-considerations" class="md-nav__link">
-    Domain name considerations
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#firewall-considerations" class="md-nav__link">
-    Firewall considerations
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#reverse-proxy-considerations" class="md-nav__link">
-    Reverse proxy considerations
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -551,42 +499,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#hardware-or-virtual-hardware-requirements" class="md-nav__link">
-    Hardware or virtual hardware requirements
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#domain-name-considerations" class="md-nav__link">
-    Domain name considerations
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#firewall-considerations" class="md-nav__link">
-    Firewall considerations
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#reverse-proxy-considerations" class="md-nav__link">
-    Reverse proxy considerations
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -597,63 +509,70 @@
             <article class="md-content__inner md-typeset">
               
                 
-<a href="https://github.com/HCW-home/edit/master/docs/deploy.md" title="Edit this page" class="md-content__button md-icon">
+<a href="https://github.com/HCW-home/edit/master/docs/doctor-to-patient.md" title="Edit this page" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
 </a>
 
 
 
-<h1 id="hcwhome-simple-secure-remote-consultations">HCW@Home - Simple &amp; Secure remote consultations</h1>
-<p>HCW@Home is a complete infrastructure composed of various components. This greatly simplifies the installation without the need to compile the solution. This also ensure smooth upgrades by using the usual package manager.
-Operating system requirements</p>
-<p>You will require at least one server running a recent version of Debian/Ubuntu. We successfully tested the setup on the following environment:</p>
+<h1 id="login-on-hcwhome">Login on HCW@Home</h1>
+<p>HCW@Home exclusively works in a web browser. Open the app with the link of your instance.</p>
+<p>It exists several ways to login into HCW@Home depending of how the solution is integrated.</p>
+<blockquote>
+<p>If you connected on Instance Demo, an SSO is in place, it means the access is handled by external server and requires to login only one time. Because you are already loggued in this website, you will be connected automatically on HCW@Home as well.</p>
+</blockquote>
+<p>The login page may vary but could look like that.</p>
+<p><img alt="alt text" src="../image-7.png" /></p>
+<p>Institutional access mean you will connect with Single Sign On process. You can also login with a simple email and password, concluded by SMS validation (2FA). </p>
+<h1 id="dashboard-page-and-menu">Dashboard page and menu</h1>
+<p>Dashboard permits to have a quick view of what is on going. The Waiting queue are patient who joined the consultation, but waiting for healthcare to handle it. Open consultation are consultation started by you.</p>
+<p>You can have the full list of <strong>Opened consultation</strong> and <strong>Waiting queue</strong> by clicking on icon available on the left of the app.</p>
+<p>Once you achieved a consultation, the consultation goes into <strong>Consultation history</strong>, but remains only 24h before data are completely wiped. We will describe a bit more about the consultation process in next sections.</p>
+<p><strong>Invitations</strong> icon will permit to send invitation to your patient. We also describe this process in next sections.</p>
+<p>Finally the <strong>Test sound/video</strong> icon permits to check that Microphone and Webcam is usable correctly.</p>
+<p><img alt="alt text" src="../image-8.png" /></p>
+<h1 id="sending-invite-to-a-patient">Sending invite to a patient</h1>
+<p>One of the usual way to use HCW@Home is starting by sending invite directly to your patient. To achieve this, click on <strong>Invitations</strong> icon, and click on <strong>New invitation</strong>.</p>
+<p>You will be asked to choose if your patient is remote (the usual) or in your office (special case where you want to do video call with third party). Let chose <strong>Patient is remote</strong>. </p>
+<p>Now define your patient <strong>Firstname</strong>, <strong>Lastname</strong>, <strong>Gender</strong> and <strong>Phone number</strong> <em>or</em> <strong>Email</strong>. Firstname, Lastname and Sex are only used to ease patient identification when he is in Waiting queue. Phone number or Email will be used to directly send the invite link, by SMS or Email.</p>
+<p>You can optionnaly invite a guest with the option available on the right.</p>
+<p><img alt="alt text" src="../image-9.png" /></p>
+<h1 id="revoke-or-resend-invite">Revoke or resend invite</h1>
+<p>In the event of you patient didn't received the link, you can resend invite. Click on Invitation from the left menu, find the right invite from the list and click on Resend.</p>
+<p>In the event of you want to cancel and rekove the invite, you can click on Delete.</p>
+<blockquote>
+<p>If you delete an invite, the patient will get an error if he clicks on the link. No notification are sent by HCW@Home to indicates the invite has been cancelled.</p>
+</blockquote>
+<p><img alt="alt text" src="../image-10.png" /></p>
+<h1 id="manage-queuing">Manage queuing</h1>
+<p>As soon as a patient uses the invite link, he will be asked to join the consultation. Then the patient will come in Waiting queue, visible from <strong>Dashboard</strong> or <strong>Waiting queue</strong> icon. You will received an audible notification in page page, prefer always keep any HCW@home opened if you expect to have remote consultation.</p>
+<p><img alt="alt text" src="../image-11.png" /></p>
+<p>You can click on the consultation request to open a quick overview and message already sent by patient. If you are ready to handle the consultation, click on <strong>Start consultation</strong>.</p>
+<blockquote>
+<p>As soon as you click on <strong>Start consultation</strong>, the consultation is moved into <strong>Open consultation</strong> section. At this stage, if a shared queue was used to make consultation request to other doctors, you will be the only one that will able to see this consultation.</p>
+</blockquote>
+<p><img alt="alt text" src="../image-12.png" /></p>
+<h1 id="make-the-consultation">Make the consultation</h1>
+<p>Once you opened a consultation, you will see the consultation overview, with patient information, patient status (if he is online or not), and message he sent.</p>
+<p>You can now manage the consultation as you want:</p>
 <ul>
-<li>Debian 10 and 11</li>
-<li>Ubuntu 20.04, 22.04</li>
-<li>Any linux with Docker support</li>
+<li>Send text message</li>
+<li>Send attachment</li>
+<li>Do a phone call</li>
+<li>Do a video call</li>
 </ul>
-<h2 id="hardware-or-virtual-hardware-requirements">Hardware or virtual hardware requirements</h2>
-<p>The requirement deeply depends of number of concurrency users connected in same time on the platform. The bare minimum is the following:</p>
+<p>Doing a phone or video call will make the patient phone/computer rining, he will have the choice to answer to the call or not.</p>
+<p><img alt="alt text" src="../image-13.png" /></p>
+<h1 id="end-the-consultation">End the consultation</h1>
+<p>When consultation ends, you have the choice to keep the consultation opened, or simply close it. Click on <strong>Terminate consultation</strong> button available on the top right.</p>
 <ul>
-<li>1Gb of RAM (a bit more if clamav is installed on same server)</li>
-<li>1 vCPU​</li>
-<li>5Gb of Hard drive free space</li>
+<li>If you keep opened the consultation, the patient can still see message and attachments. He can still send message and you can restart an audio or video call if required.</li>
+<li>If you close the consultation, the patient will be unable to see information and reach a thanks screen. He will unable to send message or attachment.</li>
 </ul>
-<h2 id="domain-name-considerations">Domain name considerations</h2>
-<p>The bare minimum domain name required by HCW@Home is three.</p>
-<ul>
-<li>Domain name used by Doctor interface (e.g. <code>healthcare.&lt;your domain&gt;.com</code>)</li>
-<li>Domain name used by Patient interface(e.g. <code>app.&lt;your domain&gt;.com</code>)</li>
-<li>Optional - Domain name used by Admin interface (e.g. <code>admin.&lt;your domain&gt;.com</code>)</li>
-<li>Mediasoup server. (e.g. <code>ms1.&lt;your domain&gt;.com</code>)</li>
-<li>Optional: Coturn URL (e.g. <code>turn.&lt;your domain&gt;.com</code>)</li>
-</ul>
-<h2 id="firewall-considerations">Firewall considerations</h2>
-<ul>
-<li>It will required to open the following ports for the Frontend and Backend:<ul>
-<li>Port 443 for the webserver (https)</li>
-<li>Port 80 for the redirect (http)</li>
-</ul>
-</li>
-<li>It will required to open the following ports for the Mediasoup<ul>
-<li>Port 443 for the webserver (https)</li>
-<li>Configurable UDP and TCP range, default is 40000 &gt; 49000.</li>
-</ul>
-</li>
-<li>It will required to open the following ports for the Turn<ul>
-<li>Port 3478 for the service listening.</li>
-<li>Configurable UDP and TCP range, default is 49152 &gt; 65535.</li>
-</ul>
-</li>
-</ul>
-<h2 id="reverse-proxy-considerations">Reverse proxy considerations</h2>
-<p>HCW@Home can perfectly work behind a reverse proxy. You must ensure to have correct support for:</p>
-<ul>
-<li>Enable support of Websocket.</li>
-<li>Don't intercept errors.</li>
-<li>Have the Host, X-Forwarded-Host, X-Forwarded-Port, X-Forwarded-For and X-Forwarded-Proto headers correctly configured.</li>
-</ul>
-<p><img alt="alt text" src="../image-4.png" /></p>
+<blockquote>
+<p>If you close the consultation, the consultation will be move to Consultation history. The consultation data will remain only 24h before it will be deleted.</p>
+</blockquote>
+<p><img alt="alt text" src="../image-14.png" /></p>
 
               
             </article>
@@ -667,7 +586,7 @@ Operating system requirements</p>
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../configure-notification/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Additional notifications" rel="prev">
+        <a href=".." class="md-footer__link md-footer__link--prev" aria-label="Previous: Introduction" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -676,20 +595,20 @@ Operating system requirements</p>
               <span class="md-footer__direction">
                 Previous
               </span>
-              Additional notifications
+              Introduction
             </div>
           </div>
         </a>
       
       
         
-        <a href="../debian/" class="md-footer__link md-footer__link--next" aria-label="Next: Install on Debian/Ubuntu" rel="next">
+        <a href="../configure-notification/" class="md-footer__link md-footer__link--next" aria-label="Next: Additional notifications" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Install on Debian/Ubuntu
+              Additional notifications
             </div>
           </div>
           <div class="md-footer__button md-icon">
