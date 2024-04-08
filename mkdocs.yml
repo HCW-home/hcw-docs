@@ -2,20 +2,20 @@ site_name: HCW@Home documentation
 repo_url: https://github.com/HCW-home
 nav:
   - Introduction: index.md
-  - User guide:
+  - For healthcare workers:
       - Patient invited by Doctor: doctor-to-patient.md
       - Additional notifications : configure-notification.md
       - Consultation requested by Partners: partner-to-doctor.md
-  - Administration:
+  - For site administrator:
       - Administrator interface: admin.md
-  - Deployment:
+  - For system administrator:
       - Concept: deploy.md
       - Install on Debian/Ubuntu: debian.md
       - Install with Docker: docker.md
       - Customize HCW@Home: customize.md
       - Configure with Keycloak: keycloak.md
       - Troubleshooting: troubleshooting.md
-  - Development:
+  - For developpers:
     - API documentation: api.md
     - Debug API with Bruno: bruno.md
     - Python SDK: python.md
