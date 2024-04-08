@@ -6,6 +6,8 @@ nav:
       - Patient invited by Doctor: doctor-to-patient.md
       - Additional notifications : configure-notification.md
       - Consultation requested by Partners: partner-to-doctor.md
+  - Administration:
+      - Administrator interface: admin.md
   - Deployment:
       - Concept: deploy.md
       - Install on Debian/Ubuntu: debian.md
