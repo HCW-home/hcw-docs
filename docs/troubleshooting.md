@@ -12,7 +12,7 @@ at PipeConnectWrap.afterConnect [as oncomplete] (node:net:1278:16) {
 }
 ```
 
-Check Clamv socket is existing with:
+Check Clamv socket exists with:
 
 ```
 ls -l /var/run/clamav/clamd.ctl

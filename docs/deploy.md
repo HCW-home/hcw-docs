@@ -1,19 +1,19 @@
 # HCW@Home - Simple & Secure remote consultations
 
-HCW@Home is a complete infrastructure composed of various components. This greatly simplifies the installation without the need to compile the solution. This also ensure smooth upgrades by using the usual package manager.
+HCW@Home is a complete infrastructure composed of various components. This greatly simplifies the installation without the need to compile the solution. This also ensures smooth upgrades by using the usual package manager.
 Operating system requirements
 
 You will require at least one server running a recent version of Debian/Ubuntu. We successfully tested the setup on the following environment:
 
 - Debian 10 and 11
 - Ubuntu 20.04, 22.04
-- Any linux with Docker support
+- Any Linux with Docker support
 
 ## Hardware or virtual hardware requirements
 
-The requirement deeply depends of number of concurrency users connected in same time on the platform. The bare minimum is the following:
+The requirement deeply depends on the number of concurrency users connected at same time on the platform. The bare minimum is the following:
 
-- 1Gb of RAM (a bit more if clamav is installed on same server)
+- 1Gb of RAM (a bit more if clamav is installed on the same server)
 - 1 vCPU​
 - 5Gb of Hard drive free space
 
@@ -29,7 +29,7 @@ The bare minimum domain name required by HCW@Home is three.
 
 ## Firewall considerations
 
-- It will required to open the following ports for the Frontend and Backend:
+- It will be required to open the following ports for the Frontend and Backend:
     - Port 443 for the webserver (https)
     - Port 80 for the redirect (http)
 - It will required to open the following ports for the Mediasoup
@@ -41,7 +41,7 @@ The bare minimum domain name required by HCW@Home is three.
 
 ## Reverse proxy considerations
 
-HCW@Home can perfectly work behind a reverse proxy. You must ensure to have correct support for:
+HCW@Home can perfectly work behind a reverse proxy. You must ensure to have the correct support for:
 
 - Enable support of Websocket.
 - Don't intercept errors.

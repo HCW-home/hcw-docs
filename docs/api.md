@@ -1,8 +1,8 @@
 # API documentation
 
-> Warning, this guide will help integration any kind of form, but is probably incomplete. If you looks for all possible endpoint, you might try with [Bruno](bruno.md)
+> Warning, this guide will help integrate any kind of form, but is probably incomplete. If you look for all possible endpoints, you might try with [Bruno](bruno.md)
 
-This guide provide you some endpoint documentation with sample of how to use HCW@Home API.
+This guide provides you with some endpoint documentation with a sample of how to use HCW@Home API.
 
 ## Response format
 
@@ -13,9 +13,9 @@ Our API is very standard and returns http code in response of all requests:
 * 401 : unauthorized request
 * 500 : server error
 
-## Authenticate as service account
+## Authenticate as the service account
 
-An account must be created with scheduler role. This specific user can bypass the 2FA auth.
+An account must be created with a scheduler role. This specific user can bypass the 2FA auth.
 
 * Authentication is done via an email and a password.
 * The application returns a jwt token stored in the cookies.
@@ -89,7 +89,7 @@ An invitation is a link allowing a patient to request a consultation.
 
 > Note: only one of phoneNumber or emailAddress is required.
 
-* phoneNumber : mobile phone number in international format of the patient. This will only be useful if the invitation is to be resent to the patient.
+* phoneNumber : mobile phone number in the international format of the patient. This will only be useful if the invitation is to be resent to the patient.
 * emailAddress : in the event that the patient does not have a mobile number, it is also possible to send him the invitation by email.
 * scheduledFor : date and time in ISO format of the date on which the consultation should take place.
 * language : patient's language, encoded on two characters
@@ -98,7 +98,7 @@ An invitation is a link allowing a patient to request a consultation.
 * lastName : patient's last name displayed in the consultation request.
 * gender : patient sex displayed in the consultation request (male or female)
 * isPatientInvite : it must always be set to true because we are here in the case of a patient invitation.
-* sendInvite (optional, default false) : does HUG@Home must take care of sending link to patient by SMS or Email (otherwise API will just return the link).
+* sendInvite (optional, default false) : does HUG@Home take care of sending link to patients by SMS or Email (otherwise API will just return the link).
 
 #### Response
 
@@ -184,7 +184,7 @@ This removes the patient invitation. This request is no longer possible when the
 
 ### Invite update
 
-This changes the patient invitation.
+This changes the patient's invitation.
 
 #### Method and URL
 
@@ -196,7 +196,7 @@ For the content, refer to the creation
 
 Once an invitation has been used by a patient, it is possible to retrieve information concerning it.
 
-> Warning !! this automatically closes the consultation and patient/doctor will not able to use it anymore !!
+> Warning !! this automatically closes the consultation and patient/doctor will not be able to use it anymore !!
 
 `POST` `/api/v1/invite/{ID}/consultation/close`
 
@@ -238,7 +238,7 @@ Once an invitation has been used by a patient, it is possible to retrieve inform
 
 ### Single Sign-On service
 
-This process permit to issue JWT token thanks to a shared key. This endpoint requires to have `SHARED_EXTERNAL_AUTH_SECRET` variable defined into backend.
+This process permits to issue JWT token thanks to a shared key. This endpoint requires to have `SHARED_EXTERNAL_AUTH_SECRET` variable defined into backend.
 
 1. Create a JWT token containing the following content, use the shared key previously defined.
 
