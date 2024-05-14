@@ -125,7 +125,7 @@ services:
       - ./data/mongo:/data/mongo
 
   patient:
-    image: https://docker.io/iabsis/hcw-patient
+    image: docker.io/iabsis/hcw-patient
     ports:
       - "8000:80"
     environment:
@@ -135,7 +135,7 @@ services:
       - backend
 
   doctor:
-    image: https://docker.io/iabsis/hcw-doctor
+    image: docker.io/iabsis/hcw-doctor
     ports:
       - "8001:80"
     environment:
@@ -145,7 +145,7 @@ services:
       - backend
 
   backend:
-    image: https://docker.io/iabsis/hcw-backend
+    image: docker.io/iabsis/hcw-backend
     ports:
       - "1337:1337"
     environment:
