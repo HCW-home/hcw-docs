@@ -757,7 +757,7 @@ replace JWT_SECRET value by random secret.
       - ./data/mongo:/data/mongo
 
   patient:
-    image: https://docker.io/iabsis/hcw-patient
+    image: docker.io/iabsis/hcw-patient
     ports:
       - &quot;8000:80&quot;
     environment:
@@ -767,7 +767,7 @@ replace JWT_SECRET value by random secret.
       - backend
 
   doctor:
-    image: https://docker.io/iabsis/hcw-doctor
+    image: docker.io/iabsis/hcw-doctor
     ports:
       - &quot;8001:80&quot;
     environment:
@@ -777,7 +777,7 @@ replace JWT_SECRET value by random secret.
       - backend
 
   backend:
-    image: https://docker.io/iabsis/hcw-backend
+    image: docker.io/iabsis/hcw-backend
     ports:
       - &quot;1337:1337&quot;
     environment:
