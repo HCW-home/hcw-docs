@@ -15,6 +15,16 @@ HCW@Home is a scalable, institution-level secure teleconsultation system for typ
 - Invite guess and translator
 - External authentication (SAML, JWT, Active Directory)
 
+## Tech stack
+
+- Exclusively coded with [NodeJS](https://nodejs.org) language
+- Frontend are coded with [Angular](https://angular.io) framework
+- Patient fronend also use [Ionic](https://ionicframework.com) framework
+- Backend is coded with [SailsJS](https://sailsjs.com) framework
+- Data are stored in [MongoDB](https://www.mongodb.com) database
+- Sessions are stored in [Redis](https://redis.io/) database
+- Mediasoup API is based on [Mediasoup](https://mediasoup.org/) for the WebRTC stack and also [Express](https://expressjs.com/fr/) for the API
+
 ## Links
 
 - Official website: [https://hcw-at-home.com/](https://hcw-at-home.com/)
