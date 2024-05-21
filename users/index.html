@@ -595,7 +595,7 @@
 <p>In the event of you use login and password credential, you might need to have an admin or a doctor role. The backend doesn't create any user, so you will need to do a small Mongo request.</p>
 <p>If you deployed HCW@Home with Debian/Ubuntu or Redhat/Rocky package, just enter in Mongo with <code>mongosh</code> command. If you used Docker, you can connect in Mongo Shell with <code>docker compose exec -ti mongo mongosh</code>. You can now run the following requests to get your first user.</p>
 <pre><code>use hcw-athome; # Replace here if you changed the database name
-db.user.insertOne({email:&quot;replace-by-your-email&quot;,  firstName:&quot;replace-by-your-firstname&quot;, lastName:&quot;replace-by-your-lastname&quot;,  role: &quot;admin&quot;,  createdAt: new Date().getTime(), &quot;updatedAt&quot;: new Date().getTime(), &quot;username&quot; : &quot;&quot;, phoneNumber: &quot;+41...&quot;})
+db.user.insertOne({email:&quot;replace-by-your-email&quot;,  firstName:&quot;replace-by-your-firstname&quot;, lastName:&quot;replace-by-your-lastname&quot;, password: &quot;$2b$10$uixuJK9bmstlDRrkp3XJV.y8r00UeD.Gmf9/sjundnbJ7BAB3qjyG&quot;, role: &quot;admin&quot;,  createdAt: new Date().getTime(), &quot;updatedAt&quot;: new Date().getTime(), &quot;username&quot; : &quot;&quot;, phoneNumber: &quot;+41...&quot;})
 </code></pre>
 
               
