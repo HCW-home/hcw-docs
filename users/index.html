@@ -422,9 +422,54 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          User management
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         User management
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#select-the-right-database" class="md-nav__link">
+    Select the right database
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-an-admin-user" class="md-nav__link">
+    Create an admin user
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#delete-a-user" class="md-nav__link">
+    Delete a user
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -575,6 +620,35 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#select-the-right-database" class="md-nav__link">
+    Select the right database
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-an-admin-user" class="md-nav__link">
+    Create an admin user
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#delete-a-user" class="md-nav__link">
+    Delete a user
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -594,8 +668,15 @@
 <h1 id="create-the-first-admin-user">Create the first admin user</h1>
 <p>In the event of you use login and password credential, you might need to have an admin or a doctor role. The backend doesn't create any user, so you will need to do a small Mongo request.</p>
 <p>If you deployed HCW@Home with Debian/Ubuntu or Redhat/Rocky package, just enter in Mongo with <code>mongosh</code> command. If you used Docker, you can connect in Mongo Shell with <code>docker compose exec -ti mongo mongosh</code>. You can now run the following requests to get your first user.</p>
+<h3 id="select-the-right-database">Select the right database</h3>
 <pre><code>use hcw-athome # Replace here if you changed the database name
-db.user.insertOne({email:&quot;replace-by-your-email&quot;,  firstName:&quot;replace-by-your-firstname&quot;, lastName:&quot;replace-by-your-lastname&quot;, password: &quot;$2b$10$uixuJK9bmstlDRrkp3XJV.y8r00UeD.Gmf9/sjundnbJ7BAB3qjyG&quot;, role: &quot;admin&quot;,  createdAt: new Date().getTime(), &quot;updatedAt&quot;: new Date().getTime(), &quot;username&quot; : &quot;&quot;, phoneNumber: &quot;+41...&quot;})
+</code></pre>
+<h3 id="create-an-admin-user">Create an admin user</h3>
+<p>The admin user will able to connect on admin and also on doctor interface. Be carefull to never create more than one user with same email, email is unique in database.</p>
+<pre><code>db.user.insertOne({email:&quot;replace-by-your-email&quot;,  firstName:&quot;replace-by-your-firstname&quot;, lastName:&quot;replace-by-your-lastname&quot;, password: &quot;$2b$10$uixuJK9bmstlDRrkp3XJV.y8r00UeD.Gmf9/sjundnbJ7BAB3qjyG&quot;, role: &quot;admin&quot;,  createdAt: new Date().getTime(), &quot;updatedAt&quot;: new Date().getTime(), &quot;username&quot; : &quot;&quot;, phoneNumber: &quot;+41...&quot;})
+</code></pre>
+<h3 id="delete-a-user">Delete a user</h3>
+<pre><code>db.user.deleteOne({email:&quot;replace-by-your-email&quot;})
 </code></pre>
 
               
