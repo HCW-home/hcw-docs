@@ -935,6 +935,7 @@ replace JWT_SECRET value by random secret.
       - clamav
     volumes:
       - ./data/attachments:/data/attachments
+    restart: always
 
   redis:
     image: redis
