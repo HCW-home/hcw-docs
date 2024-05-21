@@ -764,6 +764,11 @@ replace JWT_SECRET value by random secret.
 </code></pre>
 <h2 id="deploying-hcwhome-with-docker-compose">Deploying HCW@Home with Docker Compose</h2>
 <p>The following sample give you example of how deploying HCW@Home stack with Docker Compose. Double check the differents values you need to define.</p>
+<ul>
+<li>Patient interface will listen on port 8000</li>
+<li>Doctor interface will listen on port 8001</li>
+<li>Admin interface will listen on port 8002</li>
+</ul>
 <pre><code>services:
   mongo:
     image: mongo:6
