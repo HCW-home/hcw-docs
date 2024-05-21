@@ -12,6 +12,7 @@ nav:
       - Concept: deploy.md
       - Install on Debian/Ubuntu: debian.md
       - Install with Docker: docker.md
+      - User management: users.md
       - Customize HCW@Home: customize.md
       - Configure with Keycloak: keycloak.md
       - Troubleshooting: troubleshooting.md
