@@ -773,7 +773,7 @@ replace JWT_SECRET value by random secret.
   patient:
     image: docker.io/iabsis/hcw-patient
     ports:
-      - &quot;8000:8000&quot;
+      - &quot;8000:8080&quot;
     environment:
       - BACKEND_URL=http://backend:1337
     depends_on:
@@ -783,7 +783,7 @@ replace JWT_SECRET value by random secret.
   doctor:
     image: docker.io/iabsis/hcw-doctor
     ports:
-      - &quot;8001:8001&quot;
+      - &quot;8001:8081&quot;
     environment:
       - BACKEND_URL=http://backend:1337
     depends_on:
@@ -793,7 +793,7 @@ replace JWT_SECRET value by random secret.
   admin:
     image: docker.io/iabsis/hcw-admin
     ports:
-      - &quot;8002:8002&quot;
+      - &quot;8002:8082&quot;
     environment:
       - BACKEND_URL=http://backend:1337
     depends_on:
