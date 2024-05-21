@@ -303,6 +303,7 @@ services:
       - clamav
     volumes:
       - ./data/attachments:/data/attachments
+    restart: always
 
   redis:
     image: redis
