@@ -28,7 +28,7 @@ db.user.deleteOne({email:"replace-by-your-email"})
 
 ## Manually hash the password.
 
-If you have nodejs installed locally (or on the server you are installing), you can create the following small script (e.g. into `hashpw.js`)
+If you have nodejs installed locally (or on the server you are installing), you can create the following small script (e.g. into `hashpw.js`). Don't forget to replace "not hashed password" in the code.
 
 ``` js
 const bcrypt = require('bcrypt');
