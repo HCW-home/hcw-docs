@@ -25,3 +25,22 @@ You can now login with your email and 'admin' as password.
 ```
 db.user.deleteOne({email:"replace-by-your-email"})
 ```
+
+## Manually hash the password.
+
+If you have nodejs installed locally (or on the server you are installing), you can create the following small script (e.g. into `hashpw.js`)
+
+``` js
+const bcrypt = require('bcrypt');
+
+bcrypt.hash('not hashed password', 10, function(err, hash) {
+  if(err) console.log(err)
+  console.log(hash);
+});
+```
+
+Then run with node
+
+``` bash
+nodejs hashpw.js
+```

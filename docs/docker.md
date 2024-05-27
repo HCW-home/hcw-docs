@@ -117,6 +117,10 @@ docker compose logs -f
 
 The following sample give you example of how deploying HCW@Home stack with Docker Compose. Double check the differents values you need to define.
 
+- Patient interface will listen on port 8000
+- Doctor interface will listen on port 8001
+- Admin interface will listen on port 8002
+
 ```
 services:
   mongo:
@@ -127,7 +131,7 @@ services:
   patient:
     image: docker.io/iabsis/hcw-patient
     ports:
-      - "8000:80"
+      - "8000:8080"
     environment:
       - BACKEND_URL=http://backend:1337
     depends_on:
@@ -137,12 +141,23 @@ services:
   doctor:
     image: docker.io/iabsis/hcw-doctor
     ports:
-      - "8001:80"
+      - "8001:8081"
     environment:
       - BACKEND_URL=http://backend:1337
     depends_on:
       - mongo
       - backend
+
+  admin:
+    image: docker.io/iabsis/hcw-admin
+    ports:
+      - "8002:8082"
+    environment:
+      - BACKEND_URL=http://backend:1337
+    depends_on:
+      - mongo
+      - backend
+
 
   backend:
     image: docker.io/iabsis/hcw-backend
