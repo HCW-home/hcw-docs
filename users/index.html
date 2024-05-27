@@ -467,6 +467,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#manually-hash-the-password" class="md-nav__link">
+    Manually hash the password.
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -647,6 +654,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#manually-hash-the-password" class="md-nav__link">
+    Manually hash the password.
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -678,6 +692,18 @@
 <p>You can now login with your email and 'admin' as password.</p>
 <h3 id="delete-a-user">Delete a user</h3>
 <pre><code>db.user.deleteOne({email:&quot;replace-by-your-email&quot;})
+</code></pre>
+<h2 id="manually-hash-the-password">Manually hash the password.</h2>
+<p>If you have nodejs installed locally (or on the server you are installing), you can create the following small script (e.g. into <code>hashpw.js</code>)</p>
+<pre><code class="language-js">const bcrypt = require('bcrypt');
+
+bcrypt.hash('not hashed password', 10, function(err, hash) {
+  if(err) console.log(err)
+  console.log(hash);
+});
+</code></pre>
+<p>Then run with node</p>
+<pre><code class="language-bash">nodejs hashpw.js
 </code></pre>
 
               
