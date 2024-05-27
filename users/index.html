@@ -694,7 +694,7 @@
 <pre><code>db.user.deleteOne({email:&quot;replace-by-your-email&quot;})
 </code></pre>
 <h2 id="manually-hash-the-password">Manually hash the password.</h2>
-<p>If you have nodejs installed locally (or on the server you are installing), you can create the following small script (e.g. into <code>hashpw.js</code>)</p>
+<p>If you have nodejs installed locally (or on the server you are installing), you can create the following small script (e.g. into <code>hashpw.js</code>). Don't forget to replace "not hashed password" in the code.</p>
 <pre><code class="language-js">const bcrypt = require('bcrypt');
 
 bcrypt.hash('not hashed password', 10, function(err, hash) {
