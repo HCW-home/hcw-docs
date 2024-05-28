@@ -2,7 +2,7 @@
 
 ## Deploy Docker Compose
 
-The following sample give you example of how deploying a coturn server with Docker Compose. Don't forget to adjust the following settings:
+The following sample gives you an example of how to deploy a coturn server with Docker Compose. Don't forget to adjust the following settings:
 
 - myuser which is the login account to use turn feature
 - mypass which is the password account to use turn feature
@@ -35,7 +35,7 @@ docker compose logs -f
 
 ## Deploying mediaserver with Docker Compose
 
-The following sample give you example of how deploying a mediasoup server with Docker Compose. Don't forget to adjust the following settings:
+The following sample gives you an example of how to deploy a mediasoup server with Docker Compose. Don't forget to adjust the following settings:
 
     replace mydomain.com by you domain.
     replace PUBLIC_IP value by you real server IP

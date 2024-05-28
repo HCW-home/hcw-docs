@@ -2,9 +2,9 @@
 
 ## Introduction
 
-HCW@Home officially and natively supports OpenID authentication as client. This guide will help you to configure Keycloak as part of SSO service with HCW@Home. Note it's possible to integrate any king of OpenID provider and has been succesfully tested with Microsoft 365.
+HCW@Home officially and natively supports OpenID authentication as client. This guide will help you to configure Keycloak as part of SSO service with HCW@Home. Note it's possible to integrate any king of OpenID provider and has been successfully tested with Microsoft 365.
 
-Note that OpenID is used into Doctor, Admin and Requester interface.
+Note that OpenID is used in Doctor, Admin and Requester interface.
 
 ## Requirements
 
@@ -13,7 +13,7 @@ Note that OpenID is used into Doctor, Admin and Requester interface.
 
 ## Adding new client in Keycloak
 
-The first step is simply add Keycloak client for HCW@Home.
+The first step is simply to add Keycloak client for HCW@Home.
 
 * Open the right **Realm**.
 * Under **Client**, click on **Create client** button.
@@ -23,19 +23,19 @@ The first step is simply add Keycloak client for HCW@Home.
 * Click on **Next** and continue with:
     * Client authentication: **On**
     * Authorization: **Off**
-    * Authentication flow: keep default (**Standard flow** and **Direct access grants**)
+    * Authentication flow: to keep default (**Standard flow** and **Direct access grants**)
 * Click on **Next** and continue with:
     * Root URL: give the doctor URL (e.g. **https://access-hcw.example.com**)
     * Home URL: you can keep empty
     * Valid redirect URIs: provide a list of the three doctor, patient and admin URL. Don't forget to add **/\*** at the end of the URL (e.g. **https://access-hcw.example.com/\***, **https://app-hcw.example.com/\***, ...)
 * Click on **Save**
 
-Now keep back the following important values as we will need it later.
+Now keep back the following important values as we will need them later.
 
-* Realm: the one you choosed before creating client.
+* Realm: the one you choose before creating a client.
 * Client ID: the one you define when creating client.
 * Client Secret: go to tag **Credentials** and copy the **Client secret** key.
-* Your keycloak root URL: just look the URL in your browser (e.g. https://auth.example.com).
+* Your keycloak root URL: just look at the URL in your browser (e.g. https://auth.example.com).
 
 ## Configure HCW@Home
 

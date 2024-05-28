@@ -16,7 +16,7 @@ The Bruno projects can be opened from the doc/HCW@Home folder from [https://gith
 ![alt text](image-5.png)
 
 
-## Configure environement
+## Configure environment
 
 Now you have the Bruno project opened, click on No environment from the top right of the menu and choose Configure. Define the various information related to your project (BASE_URI, EMAIL and PASS). Click on Save.
 

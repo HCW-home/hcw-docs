@@ -39,7 +39,7 @@ After those commands are done, you should have up and running mongo service.
 
 ## Install Redis
 
-Redis is an on memory database, it's used to temporary store information like session. Installation of redis server must be shared between backends (if several one are deployed), but we are assuming here we are installing on one server. The installation is very simple:
+Redis is an on memory database, it's used to temporarily store information like a session. Installation of Redis server must be shared between backends (if several ones are deployed), but we are assuming here we are installing on one server. The installation is very simple:
 
 ```
 apt install redis-server
@@ -47,7 +47,7 @@ apt install redis-server
 
 ## Install antivirus
 
-Antivirus limits the risk to propagate malware through HCW@Home. It will check any attachments give by patient or doctor during the consultation. Antivirus can be install on same server or on external server.
+Antivirus limits the risk of propogating malware through HCW@Home. It will check any attachments given by a patient or doctor during the consultation. Antivirus can be installed on same server or on an external server.
 
 ```
 apt install clamav-daemon
@@ -64,7 +64,7 @@ systemctl status clamav-daemon
 
 Coturn is an open-source project that provides a TURN and STUN server implementation. Both TURN and STUN are protocols that help in NAT traversal for WebRTC applications.
 
-Coturn setup can be achieve in different mode, we assume that we are installing on same server than Backend, but it's strongly recommanded to install on different server.
+Coturn setup can be achieved in a different mode, we assume that we are installing on the same server as the Backend, but it's strongly recommanded to install on a different server.
 
 ```
 apt install coturn
@@ -96,13 +96,13 @@ realm=<domain>
 user=myuser:mypass
 ```
 
-If you don't want to put clear password in configuration file, you can encode the password with the following command.
+If you don't want to put a clear password in the configuration file, you can encode the password with the following command.
 
 ```
 turnadmin -k -u <user> -r <realm> -p <pass>
 ```
 
-This command returns an encoded password starting by 0xabc..., replace mypass by the returned value, ensure to keep 0x in front of the password.
+This command returns an encoded password starting with 0xabc..., replaces mypass by the returned value, ensures to keep 0x in front of the password.
 
 ```
 user=myuser:0xabc...
@@ -116,11 +116,11 @@ Keep in mind this user and password configured here as it will be used later by 
 HCW@Home is composed of four main components:
 
 - One Backend
-- One Frontend dedicated for Doctors
-- One Frontend dedicated for Patient
-- One Frontend dedicated for Administrators
+- One Frontend dedicated to Doctors
+- One Frontend dedicated to Patient
+- One Frontend dedicated to Administrators
 
-Those components can be installed on same server or on differents one. Here we will explain how to install on same server.
+Those components can be installed on the same server or on a different one. Here we will explain how to install on the same server.
 
 ```
 cat > /etc/apt/sources.list.d/hcw.list << EOF
@@ -148,19 +148,19 @@ apt install hcw-athome-patient hcw-athome-backend hcw-athome-caregiver hcw-athom
 
 Now you have an up and running HCW@Home system, you must install a web server. We tested Nginx web server even if it should work with others like Apache.
 
-Installation of Nginx is straight forward
+Installation of Nginx is straightforward
 
 ```
 apt install nginx
 ```
 
-If you don't have reverse proxy server in front of your Nginx, you might need to install certbot for issuing SSL certificates. You can install the following package
+If you don't have a reverse proxy server in front of your Nginx, you might need to install certbot for issuing SSL certificates. You can install the following package
 
 ```
 apt install python3-certbot-nginx
 ```
 
-By default, HCW@Home doesn't install Nginx configuration, but you can use the ready configuration from doc folder. Don't forget to adjust the configuration based on your needs.
+By default, HCW@Home doesn't install Nginx configuration, but you can use the ready configuration from the doc folder. Don't forget to adjust the configuration based on your needs.
 
 ```
 wget https://raw.githubusercontent.com/HCW-home/frontend-patient/master/nginx-docker.conf.template -O /etc/nginx/sites-enabled/hcw-patient.conf
@@ -189,7 +189,7 @@ certbot --nginx
 
 ## Configure HCW@Home
 
-Now that every component are ready, we can update the main configuration file /etc/hcw-athome/hcw-athome.conf. Most of the part are self explanatory, you are free to adjust according to your specific configuration.
+Now that every component is ready, we can update the main configuration file /etc/hcw-athome/hcw-athome.conf. Most of the parts are self explanatory, you are free to adjust according to your specific configuration.
 
 Also adjust the socket or port Clamav can be reached. If you use socket, you might need to first add HCW@Home system user to Clamav group to be able to communicate with the Daemon.
 
@@ -229,7 +229,7 @@ Aug 23 13:15:33 hcw-athome-dev node[546330]: debug: ----------------------------
 
 ## Create first admin account
 
-You must have a least one admin account before being able to login on the admin interface (then being able to create other user). Create the first user with mongo request.
+You must have a least one admin account before being able to login on the admin interface (then being able to create another user). Create the first user with mongo request.
 
 ```
 mongosh
@@ -237,9 +237,9 @@ use hcw-athome;
 db.user.insertOne({email:"admin@example.com",  firstName:"Admin", lastName:"",  role: "admin",  createdAt: new Date().getTime(), password: "$2b$10$uip0TKwn.kbO1s1C3jO0au4ymxjkgd.kg9ueH2oV02I4gJBKzH.2m", "updatedAt": new Date().getTime(), "username" : "admin@example.com", phoneNumber: ""})
 ```
 
-This command will create user with login "admin@example.com" and password "admin".
+This command will create a user with login "admin@example.com" and password "admin".
 
-If you need to customize this passsword and you have nodejs installed (or you do on your server), you can use the following script, by example into password.js, don't forgot to update 'not hashed password'.
+If you need to customize this password and you have nodejs installed (or you do on your server), you can use the following script, by example into password.js, don't forget to update 'not hashed password'.
 
 ```
 const bcrypt = require('bcrypt');
@@ -292,13 +292,13 @@ TURN_USERNAME1=myuser
 TURN_PASSWORD1=mypwd
 ```
 
-Most values are self explanatory, once you done your changes, restart the service with the following command.
+Most values are self explanatory, once you've done your changes, restart the service with the following command.
 
 ```
 systemctl status mediasoup-api
 ```
 
-If you prefer want to serve Mediasoup API with Nginx (recommanded), you can create a new Nginx file (by example /etc/nginx/sites-enabled/mediasoup.conf) and use the following template.
+If you prefer to serve Mediasoup API with Nginx (recommended), you can create a new Nginx file (by example /etc/nginx/sites-enabled/mediasoup.conf) and use the following template.
 
 ```
 map $http_upgrade $connection_upgrade {
