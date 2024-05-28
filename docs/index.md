@@ -8,7 +8,7 @@ HCW@Home is a scalable, institution-level secure teleconsultation system for typ
 
 - Voice & Video consultations
 - Secure Chat
-- Invite patient in seconds by SMS or Email
+- Invite patient in seconds by SMS, Whatsapp or Email
 - Send an attachment or image
 - PDF Reporting
 - Connect to external solution (OpenEMR)

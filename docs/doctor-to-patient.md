@@ -32,7 +32,7 @@ One of the usual way to use HCW@Home is starting by sending invite directly to y
 
 You will be asked to choose if your patient is remote (the usual) or in your office (special case where you want to do video call with third party). Let chose **Patient is remote**. 
 
-Now define your patient **Firstname**, **Lastname**, **Gender** and **Phone number** *or* **Email**. Firstname, Lastname and Sex are only used to ease patient identification when he is in Waiting queue. Phone number or Email will be used to directly send the invite link, by SMS or Email.
+Now define your patient **Firstname**, **Lastname**, **Gender** and **Phone number** *or* **Email**. Firstname, Lastname and Sex are only used to ease patient identification when he is in Waiting queue. Phone number or Email will be used to directly send the invite link, by SMS, Whatsapp or Email.
 
 You can optionnaly invite a guest with the option available on the right.
 
