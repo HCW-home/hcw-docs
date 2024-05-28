@@ -544,11 +544,11 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#authenticate-as-service-account" class="md-nav__link">
-    Authenticate as service account
+  <a href="#authenticate-as-the-service-account" class="md-nav__link">
+    Authenticate as the service account
   </a>
   
-    <nav class="md-nav" aria-label="Authenticate as service account">
+    <nav class="md-nav" aria-label="Authenticate as the service account">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -815,11 +815,11 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#authenticate-as-service-account" class="md-nav__link">
-    Authenticate as service account
+  <a href="#authenticate-as-the-service-account" class="md-nav__link">
+    Authenticate as the service account
   </a>
   
-    <nav class="md-nav" aria-label="Authenticate as service account">
+    <nav class="md-nav" aria-label="Authenticate as the service account">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1029,9 +1029,9 @@
 
 <h1 id="api-documentation">API documentation</h1>
 <blockquote>
-<p>Warning, this guide will help integration any kind of form, but is probably incomplete. If you looks for all possible endpoint, you might try with <a href="../bruno/">Bruno</a></p>
+<p>Warning, this guide will help integrate any kind of form, but is probably incomplete. If you look for all possible endpoints, you might try with <a href="../bruno/">Bruno</a></p>
 </blockquote>
-<p>This guide provide you some endpoint documentation with sample of how to use HCW@Home API.</p>
+<p>This guide provides you with some endpoint documentation with a sample of how to use HCW@Home API.</p>
 <h2 id="response-format">Response format</h2>
 <p>Our API is very standard and returns http code in response of all requests:</p>
 <ul>
@@ -1040,8 +1040,8 @@
 <li>401 : unauthorized request</li>
 <li>500 : server error</li>
 </ul>
-<h2 id="authenticate-as-service-account">Authenticate as service account</h2>
-<p>An account must be created with scheduler role. This specific user can bypass the 2FA auth.</p>
+<h2 id="authenticate-as-the-service-account">Authenticate as the service account</h2>
+<p>An account must be created with a scheduler role. This specific user can bypass the 2FA auth.</p>
 <ul>
 <li>Authentication is done via an email and a password.</li>
 <li>The application returns a jwt token stored in the cookies.</li>
@@ -1102,7 +1102,7 @@
 <p>Note: only one of phoneNumber or emailAddress is required.</p>
 </blockquote>
 <ul>
-<li>phoneNumber : mobile phone number in international format of the patient. This will only be useful if the invitation is to be resent to the patient.</li>
+<li>phoneNumber : mobile phone number in the international format of the patient. This will only be useful if the invitation is to be resent to the patient.</li>
 <li>emailAddress : in the event that the patient does not have a mobile number, it is also possible to send him the invitation by email.</li>
 <li>scheduledFor : date and time in ISO format of the date on which the consultation should take place.</li>
 <li>language : patient's language, encoded on two characters</li>
@@ -1111,7 +1111,7 @@
 <li>lastName : patient's last name displayed in the consultation request.</li>
 <li>gender : patient sex displayed in the consultation request (male or female)</li>
 <li>isPatientInvite : it must always be set to true because we are here in the case of a patient invitation.</li>
-<li>sendInvite (optional, default false) : does HUG@Home must take care of sending link to patient by SMS or Email (otherwise API will just return the link).</li>
+<li>sendInvite (optional, default false) : does HUG@Home take care of sending link to patients by SMS or Email (otherwise API will just return the link).</li>
 </ul>
 <h4 id="response_1">Response</h4>
 <p>Expected answer : 200 (OK)</p>
@@ -1177,14 +1177,14 @@
 <h4 id="method-and-url_4">Method and URL</h4>
 <p><code>DELETE</code> <code>/api/v1/invite/{ID}</code></p>
 <h3 id="invite-update">Invite update</h3>
-<p>This changes the patient invitation.</p>
+<p>This changes the patient's invitation.</p>
 <h4 id="method-and-url_5">Method and URL</h4>
 <p><code>PATCH</code> <code>/api/v1/invite/{ID}</code></p>
 <p>For the content, refer to the creation</p>
 <h2 id="retrieve-information-from-a-consultation">Retrieve information from a consultation</h2>
 <p>Once an invitation has been used by a patient, it is possible to retrieve information concerning it.</p>
 <blockquote>
-<p>Warning !! this automatically closes the consultation and patient/doctor will not able to use it anymore !!</p>
+<p>Warning !! this automatically closes the consultation and patient/doctor will not be able to use it anymore !!</p>
 </blockquote>
 <p><code>POST</code> <code>/api/v1/invite/{ID}/consultation/close</code></p>
 <h4 id="response_2">Response</h4>
@@ -1221,7 +1221,7 @@
 }
 </code></pre>
 <h3 id="single-sign-on-service">Single Sign-On service</h3>
-<p>This process permit to issue JWT token thanks to a shared key. This endpoint requires to have <code>SHARED_EXTERNAL_AUTH_SECRET</code> variable defined into backend.</p>
+<p>This process permits to issue JWT token thanks to a shared key. This endpoint requires to have <code>SHARED_EXTERNAL_AUTH_SECRET</code> variable defined into backend.</p>
 <ol>
 <li>Create a JWT token containing the following content, use the shared key previously defined.</li>
 </ol>

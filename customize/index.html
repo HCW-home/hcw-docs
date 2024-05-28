@@ -670,8 +670,8 @@
 <p>The following components can be customized:</p>
 <ul>
 <li>The logo: <ul>
-<li>displayed on the home page and login page of patient interface.</li>
-<li>displayed on the doctor application.</li>
+<li>displayed on the home page and login page of the patient interface.</li>
+<li>displayed on the doctor's application.</li>
 </ul>
 </li>
 <li>The primary color:<ul>
@@ -687,7 +687,7 @@
 </ul>
 </li>
 <li>The terms and conditions:<ul>
-<li>Visible on consultation requester account register page.</li>
+<li>Visible on the consultation requester account register page.</li>
 </ul>
 </li>
 <li>Visible on the patient home page.</li>
@@ -698,7 +698,7 @@
 <pre><code>LOGO=&lt;url&gt;
 </code></pre>
 <p>The URL can be relative (e.g if you upload in a folder of the doctor or patient app), or absolute (the logo is hosted somewhere else).</p>
-<p>By example with Debian package, you can put into /etc/hcw-athome/hcw-athome.conf.</p>
+<p>For example with Debian package, you can put into /etc/hcw-athome/hcw-athome.conf.</p>
 <pre><code>LOGO=/assets/logo.png
 </code></pre>
 <p>Then place the logo into the following folder:</p>
@@ -707,12 +707,12 @@
 <li>doctor: /usr/share/hcw-athome/caregiver/assets/logo.png</li>
 </ul>
 <blockquote>
-<p>Note 1 : You can have different logo this way. If you put the full URL, the same logo will be used for doctor and patient interface.
+<p>Note 1 : You can have different logo this way. If you put the full URL, the same logo will be used for the doctor and patient interface.
 Note 2 : The admin interface doesn't have any possible customization yet.</p>
 </blockquote>
 <p><img alt="alt text" src="../image-2.png" /></p>
 <h2 id="configure-the-primary-color">Configure the primary color</h2>
-<p>The primary color change the accent color into patient and doctor interface. Patient and doctor interfaces can have different color if required.</p>
+<p>The primary color changes the accent color into the patient and doctor interface. Patient and doctor interfaces can have different color if required.</p>
 <p>The color is configured in the backend:</p>
 <pre><code>DOCTOR_APP_PRIMARY_COLOR=#523C3D
 PATIENT_APP_PRIMARY_COLOR=#523C3D
@@ -720,7 +720,7 @@ PATIENT_APP_PRIMARY_COLOR=#523C3D
 <p>The color of the app.</p>
 <p><img alt="alt text" src="../image-3.png" /></p>
 <h2 id="change-the-branding-name">Change the branding name</h2>
-<p>Branding ensures that patient is using the right instance and also limit the risk of scamming. This branding is used into SMS and patient application.</p>
+<p>Branding ensures that the patient is using the right instance and also limits the risk of scamming. This branding is used in SMS and patient applications.</p>
 <pre><code>BRANDING=HCW@Home
 </code></pre>
 <p>Here a sample how mail is changed with this branding.</p>
