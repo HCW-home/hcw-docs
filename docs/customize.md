@@ -73,3 +73,70 @@ BRANDING=HCW@Home
 Here a sample how mail is changed with this branding.
 
 ![alt text](image-6.png)
+
+## Override texts and configure terms.
+
+HCW@Home permits to customize and add text into various location of the
+patient and the doctor application frontend. This is achieved thanks to
+markdown files which allow to have rich text features while keeping
+good formatting.
+
+### Doctor interface
+
+#### Footer
+
+Under the folder `/usr/share/hcw-athome/caregiver/assets`, create the file `footer.md`.
+You can also provide the translated file into `footer.$lang.md`, by example `footer.fr.md`.
+
+![doctor footer](image-25.png)
+
+#### Terms
+
+Under the folder `/usr/share/hcw-athome/patient/assets`, create the file `terms.md`.
+If you need to have terms based on country, you have to create the folder 
+`/usr/share/hcw-athome/patient/assets/terms`, and create a file called `countries.json`.
+
+This file must contain the name of the countries (you can also put other text).
+
+``` json
+[
+  "France",
+  "UK"
+]
+```
+
+And then create all corresponding files:
+
+```
+terms.UK.md
+terms.France.md
+```
+
+### Patient interface
+
+#### Footer
+
+Under the folder `/usr/share/hcw-athome/patient/assets`, create the file `home.md`.
+You can also provide the translated file into `home.$lang.md`, by example `home.fr.md`.
+
+#### Terms
+
+Under the folder `/usr/share/hcw-athome/patient/assets`, create the file `terms.md`.
+If you need to have terms based on country, you have to create the folder 
+`/usr/share/hcw-athome/patient/assets/terms`, and create a file called `countries.json`.
+
+This file must contain the name of the countries (you can also put other text).
+
+``` json
+[
+  "France",
+  "UK"
+]
+```
+
+And then create all corresponding files:
+
+```
+terms.UK.md
+terms.France.md
+```
