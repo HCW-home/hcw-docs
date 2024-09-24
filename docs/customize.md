@@ -114,8 +114,9 @@ terms.France.md
 
 ### Patient interface
 
-#### Footer
+#### Home
 
+You can customize the Home page text visible in the left area.
 Under the folder `/usr/share/hcw-athome/patient/assets`, create the file `home.md`.
 You can also provide the translated file into `home.$lang.md`, by example `home.fr.md`.
 
