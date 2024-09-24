@@ -481,6 +481,73 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#override-texts-and-configure-terms" class="md-nav__link">
+    Override texts and configure terms.
+  </a>
+  
+    <nav class="md-nav" aria-label="Override texts and configure terms.">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#doctor-interface" class="md-nav__link">
+    Doctor interface
+  </a>
+  
+    <nav class="md-nav" aria-label="Doctor interface">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#footer" class="md-nav__link">
+    Footer
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#terms" class="md-nav__link">
+    Terms
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#patient-interface" class="md-nav__link">
+    Patient interface
+  </a>
+  
+    <nav class="md-nav" aria-label="Patient interface">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#footer_1" class="md-nav__link">
+    Footer
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#terms_1" class="md-nav__link">
+    Terms
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -647,6 +714,73 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#override-texts-and-configure-terms" class="md-nav__link">
+    Override texts and configure terms.
+  </a>
+  
+    <nav class="md-nav" aria-label="Override texts and configure terms.">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#doctor-interface" class="md-nav__link">
+    Doctor interface
+  </a>
+  
+    <nav class="md-nav" aria-label="Doctor interface">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#footer" class="md-nav__link">
+    Footer
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#terms" class="md-nav__link">
+    Terms
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#patient-interface" class="md-nav__link">
+    Patient interface
+  </a>
+  
+    <nav class="md-nav" aria-label="Patient interface">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#footer_1" class="md-nav__link">
+    Footer
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#terms_1" class="md-nav__link">
+    Terms
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -725,6 +859,48 @@ PATIENT_APP_PRIMARY_COLOR=#523C3D
 </code></pre>
 <p>Here a sample how mail is changed with this branding.</p>
 <p><img alt="alt text" src="../image-6.png" /></p>
+<h2 id="override-texts-and-configure-terms">Override texts and configure terms.</h2>
+<p>HCW@Home permits to customize and add text into various location of the
+patient and the doctor application frontend. This is achieved thanks to
+markdown files which allow to have rich text features while keeping
+good formatting.</p>
+<h3 id="doctor-interface">Doctor interface</h3>
+<h4 id="footer">Footer</h4>
+<p>Under the folder <code>/usr/share/hcw-athome/caregiver/assets</code>, create the file <code>footer.md</code>.
+You can also provide the translated file into <code>footer.$lang.md</code>, by example <code>footer.fr.md</code>.</p>
+<p><img alt="doctor footer" src="../image-25.png" /></p>
+<h4 id="terms">Terms</h4>
+<p>Under the folder <code>/usr/share/hcw-athome/patient/assets</code>, create the file <code>terms.md</code>.
+If you need to have terms based on country, you have to create the folder 
+<code>/usr/share/hcw-athome/patient/assets/terms</code>, and create a file called <code>countries.json</code>.</p>
+<p>This file must contain the name of the countries (you can also put other text).</p>
+<pre><code class="language-json">[
+  &quot;France&quot;,
+  &quot;UK&quot;
+]
+</code></pre>
+<p>And then create all corresponding files:</p>
+<pre><code>terms.UK.md
+terms.France.md
+</code></pre>
+<h3 id="patient-interface">Patient interface</h3>
+<h4 id="footer_1">Footer</h4>
+<p>Under the folder <code>/usr/share/hcw-athome/patient/assets</code>, create the file <code>home.md</code>.
+You can also provide the translated file into <code>home.$lang.md</code>, by example <code>home.fr.md</code>.</p>
+<h4 id="terms_1">Terms</h4>
+<p>Under the folder <code>/usr/share/hcw-athome/patient/assets</code>, create the file <code>terms.md</code>.
+If you need to have terms based on country, you have to create the folder 
+<code>/usr/share/hcw-athome/patient/assets/terms</code>, and create a file called <code>countries.json</code>.</p>
+<p>This file must contain the name of the countries (you can also put other text).</p>
+<pre><code class="language-json">[
+  &quot;France&quot;,
+  &quot;UK&quot;
+]
+</code></pre>
+<p>And then create all corresponding files:</p>
+<pre><code>terms.UK.md
+terms.France.md
+</code></pre>
 
               
             </article>
