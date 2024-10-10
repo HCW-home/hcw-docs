@@ -782,7 +782,7 @@ apt install ${PACKAGE}
 
 # MongoDB Repository
 NAME=mongodb
-VERSION=6.0
+VERSION=8.0
 DIST_NAME=$(lsb_release -si)
 COMPONENT=$(if [ ${DIST_NAME} == &quot;Ubuntu&quot; ] ; then echo &quot;multiverse&quot; ; else echo &quot;main&quot; ; fi )
 KEY_URL=&quot;https://www.mongodb.org/static/pgp/server-${VERSION}.asc&quot;
