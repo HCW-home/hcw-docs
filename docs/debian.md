@@ -9,7 +9,7 @@ apt install curl gnupg ca-certificates lsb-release
 
 # NodeJS Repository
 NAME=nodejs
-VERSION=16
+VERSION=18
 KEY_URL="https://deb.nodesource.com/gpgkey/nodesource.gpg.key"
 APT_URL="https://deb.nodesource.com/node_${VERSION}.x $(lsb_release -sc) main"
 PACKAGE=nodejs
