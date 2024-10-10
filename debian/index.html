@@ -843,6 +843,19 @@ user=myuser:mypass
 <pre><code>user=myuser:0xabc...
 </code></pre>
 <p>Keep in mind this user and password configured here as it will be used later by Mediasoup server.</p>
+<p>Dont forget to restart the service then.</p>
+<pre><code>systemctl restart coturn
+</code></pre>
+<p>You can now open the following page to ensure turn is working.</p>
+<blockquote>
+<p>https://webrtc.github.io/samples/src/content/peerconnection/trickle-ice/</p>
+</blockquote>
+<ul>
+<li>STUN or TURN URI: Put <code>turn:&lt;ip address&gt;</code></li>
+<li>TURN username: <code>&lt;username &gt;</code></li>
+<li>TURN password: <code>&lt;&gt;</code></li>
+</ul>
+<p>Remove the Google server and add the new server. Click on "Gather candidate" and check you get the "done".</p>
 <h2 id="install-hcwhome-repository-and-package">Install HCW@Home repository and package</h2>
 <p>HCW@Home is composed of four main components:</p>
 <ul>
@@ -875,8 +888,8 @@ EOF
 </code></pre>
 <p>By default, HCW@Home doesn't install Nginx configuration, but you can use the ready configuration from the doc folder. Don't forget to adjust the configuration based on your needs.</p>
 <pre><code>wget https://raw.githubusercontent.com/HCW-home/frontend-patient/master/nginx-docker.conf.template -O /etc/nginx/sites-enabled/hcw-patient.conf
-wget https://raw.githubusercontent.com/HCW-home/frontend-patient/master/nginx-docker.conf.template -O /etc/nginx/sites-enabled/hcw-doctor.conf
-wget https://raw.githubusercontent.com/HCW-home/frontend-patient/master/nginx-docker.conf.template -O /etc/nginx/sites-enabled/hcw-admin.conf
+wget https://raw.githubusercontent.com/HCW-home/frontend-doctor/master/nginx-docker.conf.template -O /etc/nginx/sites-enabled/hcw-doctor.conf
+wget https://raw.githubusercontent.com/HCW-home/frontend-admin/master/nginx-docker.conf.template -O /etc/nginx/sites-enabled/hcw-admin.conf
 rm /etc/nginx/sites-enabled/default
 </code></pre>
 <p>Update the files :</p>
