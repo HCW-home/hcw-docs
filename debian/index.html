@@ -887,9 +887,9 @@ EOF
 <pre><code>apt install python3-certbot-nginx
 </code></pre>
 <p>By default, HCW@Home doesn't install Nginx configuration, but you can use the ready configuration from the doc folder. Don't forget to adjust the configuration based on your needs.</p>
-<pre><code>wget https://raw.githubusercontent.com/HCW-home/frontend-patient/master/nginx-docker.conf.template -O /etc/nginx/sites-enabled/hcw-patient.conf
-wget https://raw.githubusercontent.com/HCW-home/frontend-doctor/master/nginx-docker.conf.template -O /etc/nginx/sites-enabled/hcw-doctor.conf
-wget https://raw.githubusercontent.com/HCW-home/frontend-admin/master/nginx-docker.conf.template -O /etc/nginx/sites-enabled/hcw-admin.conf
+<pre><code>cp /usr/share/doc/hcw-athome-backend/nginx-samples/hcw-athome-patient.conf /etc/nginx/sites-enabled/hcw-patient.conf
+cp /usr/share/doc/hcw-athome-backend/nginx-samples/hcw-athome-doctor.conf /etc/nginx/sites-enabled/hcw-doctor.conf
+cp /usr/share/doc/hcw-athome-backend/nginx-samples/hcw-athome-doctor.conf /etc/nginx/sites-enabled/hcw-admin.conf
 rm /etc/nginx/sites-enabled/default
 </code></pre>
 <p>Update the files :</p>
@@ -1005,6 +1005,9 @@ server {
 MEDIASOUP_URL=https://&lt;replace-by-my-domain&gt;
 MEDIASOUP_USER=abcd
 MEDIASOUP_SECRET=1234
+</code></pre>
+<p>Restart the HCW@Home backend</p>
+<pre><code>systemctl restart hcw-athome
 </code></pre>
 <p>If you have more than one server, you can add all from admin interface from "Mediasoup" menu.</p>
 <p><img alt="alt text" src="../image.png" /></p>

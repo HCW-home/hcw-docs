@@ -687,9 +687,12 @@
 </code></pre>
 <h3 id="create-an-admin-user">Create an admin user</h3>
 <p>The admin user will able to connect on admin and also on doctor interface. Be carefull to never create more than one user with same email, email is unique in database.</p>
-<pre><code>db.user.insertOne({email:&quot;replace-by-your-email&quot;,  firstName:&quot;replace-by-your-firstname&quot;, lastName:&quot;replace-by-your-lastname&quot;, password: &quot;$2b$10$uixuJK9bmstlDRrkp3XJV.y8r00UeD.Gmf9/sjundnbJ7BAB3qjyG&quot;, role: &quot;admin&quot;,  createdAt: new Date().getTime(), &quot;updatedAt&quot;: new Date().getTime(), &quot;username&quot; : &quot;&quot;, phoneNumber: &quot;+41...&quot;})
+<pre><code>db.user.insertOne({email:&quot;replace-by-your-email&quot;,  firstName:&quot;replace-by-your-firstname&quot;, lastName:&quot;replace-by-your-lastname&quot;, password: &quot;$2b$10$uixuJK9bmstlDRrkp3XJV.y8r00UeD.Gmf9/sjundnbJ7BAB3qjyG&quot;, role: &quot;admin&quot;,  createdAt: new Date().getTime(), &quot;updatedAt&quot;: new Date().getTime(), &quot;username&quot; : &quot;&quot;, authPhoneNumber: '+41 ...', phoneNumber: &quot;+41...&quot;})
 </code></pre>
 <p>You can now login with your email and 'admin' as password.</p>
+<blockquote>
+<p>authPhoneNumber with password authentication is mandatory since it will be used to validate 2FA by SMS.</p>
+</blockquote>
 <h3 id="delete-a-user">Delete a user</h3>
 <pre><code>db.user.deleteOne({email:&quot;replace-by-your-email&quot;})
 </code></pre>
