@@ -15,10 +15,12 @@ use hcw-athome # Replace here if you changed the database name
 The admin user will able to connect on admin and also on doctor interface. Be carefull to never create more than one user with same email, email is unique in database.
 
 ```
-db.user.insertOne({email:"replace-by-your-email",  firstName:"replace-by-your-firstname", lastName:"replace-by-your-lastname", password: "$2b$10$uixuJK9bmstlDRrkp3XJV.y8r00UeD.Gmf9/sjundnbJ7BAB3qjyG", role: "admin",  createdAt: new Date().getTime(), "updatedAt": new Date().getTime(), "username" : "", phoneNumber: "+41..."})
+db.user.insertOne({email:"replace-by-your-email",  firstName:"replace-by-your-firstname", lastName:"replace-by-your-lastname", password: "$2b$10$uixuJK9bmstlDRrkp3XJV.y8r00UeD.Gmf9/sjundnbJ7BAB3qjyG", role: "admin",  createdAt: new Date().getTime(), "updatedAt": new Date().getTime(), "username" : "", authPhoneNumber: '+41 ...', phoneNumber: "+41..."})
 ```
 
 You can now login with your email and 'admin' as password.
+
+> authPhoneNumber with password authentication is mandatory since it will be used to validate 2FA by SMS.
 
 ### Delete a user
 

@@ -110,6 +110,22 @@ user=myuser:0xabc...
 
 Keep in mind this user and password configured here as it will be used later by Mediasoup server.
 
+Dont forget to restart the service then.
+
+```
+systemctl restart coturn
+```
+
+You can now open the following page to ensure turn is working.
+
+> https://webrtc.github.io/samples/src/content/peerconnection/trickle-ice/
+
+* STUN or TURN URI: Put `turn:<ip address>`
+* TURN username: `<username >`
+* TURN password: `<>`
+
+Remove the Google server and add the new server. Click on "Gather candidate" and check you get the "done".
+
 ## Install HCW@Home repository and package
 
 
@@ -163,9 +179,9 @@ apt install python3-certbot-nginx
 By default, HCW@Home doesn't install Nginx configuration, but you can use the ready configuration from the doc folder. Don't forget to adjust the configuration based on your needs.
 
 ```
-wget https://raw.githubusercontent.com/HCW-home/frontend-patient/master/nginx-docker.conf.template -O /etc/nginx/sites-enabled/hcw-patient.conf
-wget https://raw.githubusercontent.com/HCW-home/frontend-patient/master/nginx-docker.conf.template -O /etc/nginx/sites-enabled/hcw-doctor.conf
-wget https://raw.githubusercontent.com/HCW-home/frontend-patient/master/nginx-docker.conf.template -O /etc/nginx/sites-enabled/hcw-admin.conf
+cp /usr/share/doc/hcw-athome-backend/nginx-samples/hcw-athome-patient.conf /etc/nginx/sites-enabled/hcw-patient.conf
+cp /usr/share/doc/hcw-athome-backend/nginx-samples/hcw-athome-doctor.conf /etc/nginx/sites-enabled/hcw-doctor.conf
+cp /usr/share/doc/hcw-athome-backend/nginx-samples/hcw-athome-doctor.conf /etc/nginx/sites-enabled/hcw-admin.conf
 rm /etc/nginx/sites-enabled/default
 ```
 
@@ -347,6 +363,13 @@ MEDIASOUP_USER=abcd
 MEDIASOUP_SECRET=1234
 ```
 
+Restart the HCW@Home backend
+
+```
+systemctl restart hcw-athome
+```
+
 If you have more than one server, you can add all from admin interface from "Mediasoup" menu.
 
 ![alt text](image.png)
+
