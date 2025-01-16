@@ -1,6 +1,6 @@
 # How to install HCW@Home with Docker
 
-## Deploy Docker Compose
+## Deploy Coturn with Docker Compose
 
 The following sample gives you an example of how to deploy a coturn server with Docker Compose. Don't forget to adjust the following settings:
 
@@ -21,7 +21,7 @@ services:
       - "5349:5349"
       - "5349:5349/udp"
       - "49152-65535:49152-65535/udp"
-    command: "--fingerprint --lt-cred-mech --user myuser:mypass --realm yourdomain.com
+    command: "--fingerprint --lt-cred-mech --user {{coturn_user:coturn_user}}:{{coturn_password:coturn_pass}} --realm yourdomain.com
     network_mode: "host"
 ```
 
@@ -51,18 +51,18 @@ services:
       - "3443:3443"
     environment:
       ## Define random key here
-      - JWT_SECRET=aadsrwerrf
+      - JWT_SECRET={{random_jwt_key:Super3trong4ey$}}
 
       ## Configure credentials used to consume mediasoup API
-      - API_USER=abcd
-      - API_SECRET=1234
+      - API_USER={{mediasoup_api_user:mediasoup_user}}
+      - API_SECRET={{mediasoup_api_password:mediasoup_pass}}
 
       ## Define here the public IP server
-      - PUBLIC_IP=1.2.3.4
+      - PUBLIC_IP={{mediasoup_server_ip_address:192.168.0.10}}
 
       ## If server is behind nat, you might need to advertise
       # the real public IP by commenting out this line.
-      - ANNOUNCED_IP=1.2.3.4
+      - ANNOUNCED_IP={{mediasoup_public_ip_address:1.2.3.4}}
 
       ## You will need to open UDP port in the follow range, you
       # can adjust the range if required.
@@ -80,6 +80,16 @@ services:
       ## Redis server
       - REDIS_HOST=redis
 
+      ## Turn server configuration
+      - TURN_SERVER1=turn:{{coturn_hostname:fqdm_coturn.com}}
+      - TURN_USERNAME1={{coturn_user:coturn_user}}
+      - TURN_PASSWORD1={{coturn_password:coturn_pass}}
+
+      ## Turn server configuration backup (optional)
+      #- TURN_SERVER2=turn:fqdm_coturn2.com
+      #- TURN_USERNAME2=coturn_user2
+      #- TURN_PASSWORD2=coturn_pass2
+
     depends_on:
       - redis
     volumes:
@@ -92,7 +102,9 @@ services:
     image: certbot/certbot:latest
     volumes:
       - ./data/certbot/:/etc/letsencrypt/live
-    command: certonly --standalone -d turn.mydomain.com --non-interactive --agree-tos --email info@mydomain.com
+    command: certonly --standalone -d {{mediasoup_fqdn_hostname:fqdm-mediasoup-domain.com}} --non-interactive --agree-tos --email info@mydomain.com
+    ports:
+      - "80:80"
 
   certbot-renew:
     image: certbot/certbot:latest
@@ -184,10 +196,10 @@ services:
       - NODE_ENV=production
 
       # Public url to be accessed by the patient
-      - PUBLIC_URL=https://<replace-by-my-domain>
+      - PUBLIC_URL={{patient_https_url:https://replace-by-patient-domain.com}}
 
       # Mail configuration.
-      - MAIL_SMTP_HOST=<https://my-smtp-server.ch%3E/
+      - MAIL_SMTP_HOST=<https://my-smtp-server.ch>/
       - MAIL_SMTP_PORT=465
       - MAIL_SMTP_SECURE=true
       - https://MAIL_SMTP_SENDER%3Dnoreply@hcw-athome.ch/
@@ -247,7 +259,7 @@ services:
       # - DEFAULT_QUEUE_ID=Default
 
       # Public url to be accessed by the doctor
-      - DOCTOR_URL=https://<replace-by-my-domain>
+      - DOCTOR_URL={{doctor_https_url:https://replace-by-doctor-domain.com}}
 
       # ClamAv can be used to check sanity of transfered
       # files. Define there socket path for Antivirus Clamav
@@ -285,9 +297,9 @@ services:
 
       # If all Mediasoup servers fails, fallback
       # to the following server.
-      - MEDIASOUP_URL=https://<replace-by-my-domain>
-      - MEDIASOUP_USER=abcd
-      - MEDIASOUP_SECRET=1234
+      - MEDIASOUP_URL=https://{{mediasoup_fqdn_hostname:fqdm-mediasoup-domain.com}}
+      - MEDIASOUP_USER={{mediasoup_api_user:mediasoup_user}}
+      - MEDIASOUP_SECRET={{mediasoup_api_password:mediasoup_pass}}
 
       ## Branding used by HCW@Home
       - BRANDING=ICRC@Home

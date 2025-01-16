@@ -12,6 +12,7 @@ nav:
       - Concept: deploy.md
       - Install on Debian/Ubuntu: debian.md
       - Install with Docker: docker.md
+      - Install with Docker (local): docker-local.md
       - User management: users.md
       - Customize HCW@Home: customize.md
       - Configure with Keycloak: keycloak.md
@@ -30,3 +31,7 @@ theme:
     accent: light blue
   icon:
     repo: fontawesome/brands/github
+extra_javascript:
+  - js/variables.js
+extra_css:
+  - css/style.css
