@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
   if (Object.keys(variables).length > 0) {
     const form = document.createElement("form");
     form.setAttribute("class", "variable-form");
-    form.innerHTML = "<h3>Configure mandatory variables</h3><p>This page is interative, you can configure here the important variable.</p>";
+    form.innerHTML = "<h3>Configure mandatory variables</h3><p>This page is interactive, you can configure here the important variable.</p>";
 
     Object.entries(variables).forEach(([name, { defaultValue, options }]) => {
       const label = document.createElement("label");
