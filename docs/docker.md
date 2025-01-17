@@ -1,5 +1,9 @@
 # How to install HCW@Home with Docker
 
+> This deployment is more about giving your main guide lines and will not work out the box. Due to various way to deploy our scalable solution, we are unable to provide an universal way to make your deployment. If you are in trouble, please contact us.
+
+> You should consider using our own reverse proxy. Those samples are not providing the SSL layer required for having working WebRTC.
+
 ## Deploy Coturn with Docker Compose
 
 The following sample gives you an example of how to deploy a coturn server with Docker Compose. Don't forget to adjust the following settings:
