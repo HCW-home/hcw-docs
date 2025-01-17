@@ -1,6 +1,6 @@
 # How to install HCW@Home with Docker for local testing purpose
 
-## Deploying mediaserver with Docker Compose
+We are offering a one docker-compose.yml ready file for local testing purpose. Just create the file with the following content, then use `docker compose up` to start the stack. This setup has been fully validated with Google Chrome.
 
 
 ```
@@ -93,13 +93,12 @@ services:
       - APP_SECRET='myjwtsecret'
       - NODE_ENV=development
       - PUBLIC_URL=https://{{your_local_ip:192.168.1.10}}:4000
-      - MAIL_SMTP_HOST=<https://my-smtp-server.ch%3E/
+      - MAIL_SMTP_HOST=<https://my-smtp-server.ch>/
       - MAIL_SMTP_PORT=465
       - MAIL_SMTP_SECURE=true
-      - https://MAIL_SMTP_SENDER%3Dnoreply@hcw-athome.ch/
+      - MAIL_SMTP_SENDER=noreply@hcw-athome.ch
       - MAIL_SMTP_USER=
       - MAIL_SMTP_PASSWORD=
-      - SMS_CLICKATEL=
       - LOGIN_METHOD=password
       - DOCTOR_URL=https://{{your_local_ip:192.168.1.10}}:4001
       - MEDIASOUP_URL=https://{{your_local_ip:192.168.1.10}}:3443
@@ -129,4 +128,4 @@ Since all certificates are self signed, you have to open Mediasoup server to acc
 - Mediasoup: https://{{your_local_ip:192.168.1.10}}:3443 (you should have "Cannot GET /" message)
 - Doctor URL: https://{{your_local_ip:192.168.1.10}}:4001 (accept the certificate)
 - Patient URL: https://{{your_local_ip:192.168.1.10}}:4000 (accept the certificate)
-- Admin URL: http://{{your_local_ip:192.168.1.10}}:8002 (accept the certificate)
+- Admin URL: http://{{your_local_ip:192.168.1.10}}:8002
