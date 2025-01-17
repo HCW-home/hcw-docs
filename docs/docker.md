@@ -142,7 +142,7 @@ services:
   mongo:
     image: mongo:6
     volumes:
-      - ./data/mongo:/data/mongo
+      - ./data/mongo:/data/db
 
   patient:
     image: docker.io/iabsis/hcw-patient
