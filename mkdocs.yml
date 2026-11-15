@@ -1,5 +1,6 @@
-site_name: HCW@Home documentation
-repo_url: https://github.com/HCW-home
+site_name: HCW@Home v5 documentation
+repo_url: https://github.com/HCW-home/hcw-docs
+edit_uri: edit/main/docs/
 nav:
   - Introduction: index.md
   - For healthcare workers:
@@ -25,6 +26,7 @@ extra:
   homepage: https://hcw-at-home.com
 theme:
   name: material
+  custom_dir: overrides
   logo: logo.svg
   palette:
     primary: white
