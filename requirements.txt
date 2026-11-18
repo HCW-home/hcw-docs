@@ -1,0 +1,3 @@
+# Versions actuellement en production (voir la balise generator du site en ligne)
+mkdocs==1.4.2
+mkdocs-material==8.2.5
