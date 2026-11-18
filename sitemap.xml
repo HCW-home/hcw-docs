@@ -1,82 +1,82 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-         <loc>None</loc>
+         <loc>https://docs.hcw-at-home.com/</loc>
          <lastmod>2026-11-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://docs.hcw-at-home.com/admin/</loc>
          <lastmod>2026-11-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://docs.hcw-at-home.com/api/</loc>
          <lastmod>2026-11-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://docs.hcw-at-home.com/bruno/</loc>
          <lastmod>2026-11-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://docs.hcw-at-home.com/configure-notification/</loc>
          <lastmod>2026-11-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://docs.hcw-at-home.com/customize/</loc>
          <lastmod>2026-11-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://docs.hcw-at-home.com/debian/</loc>
          <lastmod>2026-11-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://docs.hcw-at-home.com/deploy/</loc>
          <lastmod>2026-11-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://docs.hcw-at-home.com/docker-local/</loc>
          <lastmod>2026-11-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://docs.hcw-at-home.com/docker/</loc>
          <lastmod>2026-11-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://docs.hcw-at-home.com/doctor-to-patient/</loc>
          <lastmod>2026-11-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://docs.hcw-at-home.com/keycloak/</loc>
          <lastmod>2026-11-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://docs.hcw-at-home.com/partner-to-doctor/</loc>
          <lastmod>2026-11-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://docs.hcw-at-home.com/python/</loc>
          <lastmod>2026-11-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://docs.hcw-at-home.com/troubleshooting/</loc>
          <lastmod>2026-11-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://docs.hcw-at-home.com/users/</loc>
          <lastmod>2026-11-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
