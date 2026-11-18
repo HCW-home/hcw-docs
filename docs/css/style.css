@@ -34,3 +34,16 @@
     }
 }
 
+
+/* Version notice shown in the announcement bar on every page */
+.hcw-version-notice {
+  padding: 0.6rem 0.8rem;
+  text-align: center;
+  font-size: 0.72rem;
+  line-height: 1.5;
+}
+.hcw-version-notice a {
+  color: inherit;
+  text-decoration: underline;
+  font-weight: 700;
+}
